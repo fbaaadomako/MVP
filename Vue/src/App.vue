@@ -85,7 +85,8 @@ export default {
       // If input field has content, open form and call handleSubmit from Modal to post info to Medication component
       if (this.nameError === "") {
         this.showModal = true
-        this.handleSubmit()
+        this.handleSubmit()     // _ANNA_ you cannot call handleSubmit from another component like this
+        // it now tries to find handlesubmit as a method in here and gives error, remove this line, you already call handleSubmit in the modal when you click the modal button
       }
       e.preventDefault()
     },
