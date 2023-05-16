@@ -88,7 +88,7 @@ export default {
         this.handleSubmit()     // _ANNA_ you cannot call handleSubmit from another component like this
         // it now tries to find handlesubmit as a method in here and gives error, remove this line, you already call handleSubmit in the modal when you click the modal button
       }
-      e.preventDefault()
+      e.preventDefault(). //_ANNA_ also remove, throws an error, not needed cause it is not a submit event
     },
   },
   //GET list of medications from database
