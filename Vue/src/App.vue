@@ -94,19 +94,6 @@ export default {
       if (this.nameError === "") {
         this.showModal = true
       }
-
-      // fetch('http://localhost:4000/', {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({ name: this.name })
-      // })
-      //   .then(response => response.json())
-      //   //POST data to medCards array by creating a copy with spread operator
-      //   //and adding new inputs
-      //   .then(data => this.medCards = [...data])
-      //   .catch(error => {
-      //     console.log(error);
-      //   });
     },
   },
   //GET list of medications from database
@@ -125,9 +112,6 @@ export default {
   min-width: 300px;
 }
 
-/* body {
-  margin-bottom: 24pt;
-} */
 
 .btn-space {
   margin-right: 5px !important;
