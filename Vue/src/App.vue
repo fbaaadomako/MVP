@@ -13,7 +13,7 @@
         </button>
       </router-link>
 
-      <router-link to="/Medications">
+      <router-link to="/medications">
         <button :class="{ 'nav underline underline-offset-4': !Selected, 'nav': Selected }"
           @click="Selected = false">Medications
         </button>
@@ -46,8 +46,7 @@
       <!-- use the modal component, pass in the prop -->
       <!-- Modal Pop up -->
       <!-- Pass from modal to medication updated medcards array using $emit-->
-      <Modal :show="showModal" @close="showModal = false" :medname="name">
-        <!-- <Modal :show="showModal" @close="showModal = false" :medname="name"> -->
+      <Modal :show="showModal" @close="showModal = false" :medname="name" @updatedmedCards="medCards">
         <template #header>
           <h2 class=" w-3/4 w-1.5 border-b-2 border-gray-300">{{ name }}</h2>
         </template>

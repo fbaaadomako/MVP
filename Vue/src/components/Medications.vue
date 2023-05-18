@@ -14,7 +14,7 @@
           <p v-if="card.frequency > 1"><strong>Daily Frequency:</strong> {{ card.frequency }} times a day</p>
           <p v-else> <strong>Daily Frequency:</strong> {{ card.frequency }} time a day</p>
 
-          <p><strong>Prescribed for:</strong> {{ card.reason }}</p>
+          <p v-if="card.reason"><strong>Prescribed for:</strong> {{ card.reason }}</p>
 
           <p v-if="card.doctor"><strong>Prescribing Physician:</strong> {{ card.doctor }}</p>
 
@@ -52,7 +52,7 @@ export default {
         fetch(`http://localhost:4000/${id}`, {
           method: "DELETE",
         })
-          .then(response => response.json())
+          .then(response => { response.json() })
           .then(data => this.medCards = [...data])
           .catch(error => {
             console.log(error);

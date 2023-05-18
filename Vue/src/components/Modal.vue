@@ -28,7 +28,7 @@
 
           <button
             class="btn text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center"
-            @click="handleSubmit">Save & Continue</button>
+            @click.prevent="handleSubmit">Save & Continue</button>
 
         </div>
       </div>
@@ -64,9 +64,9 @@ export default {
       // this.handlePost()
       //   }
 
-      this.handlePost()
-    },
-    handlePost() {
+      // this.handlePost()
+      // },
+      // handlePost() {
       fetch('http://localhost:4000/', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -80,15 +80,20 @@ export default {
       })
         .then(response => response.json())
         //POST data to medCards array by creating a copy with spread operator and adding new inputs
+
         .then(data => {
-          this.medCards = [...data]
-          this.$emit('close')
+          (this.medCards = [...data],
+            // this.$emit(['updatedmedCards'])
+            // this.$emit('updatedmedCards')
+            this.$emit('close'))
         })
         .catch(error => {
           console.log(error);
         });
+      this.$emit('updatedmedcards')
+      // },
     },
-  },
+  }
 }
 
 </script>
