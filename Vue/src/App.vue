@@ -29,7 +29,9 @@
 
       <div class="mx-10">
         <h1 class="pb-6">Hello, User</h1>
-        <p>Please enter the name of a prescription to begin:</p>
+        <label>
+          <p>Please enter the name of a prescription to begin:</p>
+        </label>
         <div class="inputarea">
           <input class="textbox" type="text" required v-model="name" placeholder="e.g. Tylenol" />
 
@@ -85,7 +87,11 @@ export default {
     }
   },
   methods: {
-
+    // updateMeds(meds) {
+    //   // let meds = "meds go here"
+    //   console.log(meds)
+    //   this.medCards.push({ meds })
+    // },
     checkInput(e) {
       this.nameError = this.name.length > 0 ? "" : "This field cannot be empty";
 

@@ -1,12 +1,6 @@
 var express = require("express");
 var router = express.Router();
 const db = require("../model/helper");
-// import Medications from "@/Vue/Medications.vue";
-
-// const routes = [
-//   { path: "/", component: Home },
-//   { path: "/medications", name: medications, component: Medications },
-// ];
 
 /* GET list of medications */
 router.get("/", function (req, res, next) {

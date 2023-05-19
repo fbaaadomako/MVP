@@ -28,7 +28,7 @@
 
           <button
             class="btn text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center"
-            @click.prevent="handleSubmit">Save & Continue</button>
+            @click.prevent="handleSubmit()">Save & Continue</button>
 
         </div>
       </div>
@@ -84,14 +84,20 @@ export default {
         .then(data => {
           (this.medCards = [...data],
             // this.$emit(['updatedmedCards'])
-            // this.$emit('updatedmedCards')
+            // this.$emit('updatedmedcards', this.medCards),
+
             this.$emit('close'))
         })
         .catch(error => {
           console.log(error);
         });
-      this.$emit('updatedmedcards')
-      // },
+
+      this.$emit('updatedmedCards')
+      // this.$emit('updatedmedcards', this.medCards)
+      // this.$emit('updatedmedCards')
+
+      location.reload()
+
     },
   }
 }
