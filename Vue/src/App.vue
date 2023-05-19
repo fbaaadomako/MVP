@@ -44,8 +44,6 @@
         <div class="py-2 text-red-600 font-medium" v-if="nameError">{{ nameError }}</div>
       </div>
 
-      <!-- <Teleport to="body"> -->
-      <!-- use the modal component, pass in the prop -->
       <!-- Modal Pop up -->
       <!-- Pass from modal to medication updated medcards array using $emit-->
       <Modal :show="showModal" @close="showModal = false" :medname="name" @updatedmedCards="medCards">
@@ -53,7 +51,6 @@
           <h2 class=" w-3/4 w-1.5 border-b-2 border-gray-300">{{ name }}</h2>
         </template>
       </Modal>
-      <!-- </Teleport> -->
     </div>
 
     <!--MEDICATION COMPONENT-->
@@ -88,9 +85,6 @@ export default {
   },
   methods: {
     // updateMeds(meds) {
-    //   // let meds = "meds go here"
-    //   console.log(meds)
-    //   this.medCards.push({ meds })
     // },
     checkInput(e) {
       this.nameError = this.name.length > 0 ? "" : "This field cannot be empty";

@@ -57,16 +57,13 @@ export default {
   },
   methods: {
     handleSubmit() {
-      // this.modalError = (this.frequency.length) && (this.dose.length) > 0 ?
+      // this.modalError = (this.frequency.length) > 0 ?
       //   "" : "Please complete all required fields";
 
       //  (this.modalError === "") ? {
       // this.handlePost()
       //   }
 
-      // this.handlePost()
-      // },
-      // handlePost() {
       fetch('http://localhost:4000/', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -83,9 +80,6 @@ export default {
 
         .then(data => {
           (this.medCards = [...data],
-            // this.$emit(['updatedmedCards'])
-            // this.$emit('updatedmedcards', this.medCards),
-
             this.$emit('close'))
         })
         .catch(error => {
@@ -93,8 +87,6 @@ export default {
         });
 
       this.$emit('updatedmedCards')
-      // this.$emit('updatedmedcards', this.medCards)
-      // this.$emit('updatedmedCards')
 
       location.reload()
 
