@@ -41,7 +41,7 @@ export default {
       name: "",
       dose: "",
       reason: "",
-      frequency: "",
+      frequency: 0,
       doctor: "",
       medCards: [{}]
     };
@@ -52,13 +52,15 @@ export default {
         fetch(`http://localhost:4000/${id}`, {
           method: "DELETE",
         })
-          .then(response => { response.json() })
-          .then(data => this.medCards = [...data])
+          .then(response => response.json())
+          .then(data => {
+            // this.medCards = [...data]
+            this.$emit('delete', data)
+          })
           .catch(error => {
             console.log(error);
           });
       }
-      location.reload()
     }
   }
 }
