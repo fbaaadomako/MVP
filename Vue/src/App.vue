@@ -46,7 +46,7 @@
 
       <!-- Modal Pop up -->
       <!-- Pass from modal to medication updated medcards array using $emit-->
-      <Modal :show="showModal" @close="showModal = false" :medname="name" @updatedmedCards="medCards">
+      <Modal :show="showModal" @close="showModal = false" :medname="name" @updatedmedCards="updateMeds">
         <template #header>
           <h2 class=" w-3/4 w-1.5 border-b-2 border-gray-300">{{ name }}</h2>
         </template>
@@ -54,7 +54,7 @@
     </div>
 
     <!--MEDICATION COMPONENT-->
-    <Medications :cards="medCards" />
+    <Medications :cards="medCards" @delete="deleteCard" />
   </div>
 </template>
 
@@ -84,8 +84,12 @@ export default {
     }
   },
   methods: {
-    // updateMeds(meds) {
-    // },
+    deleteCard(meds) {
+      this.medCards = [...meds]
+    },
+    updateMeds(meds) {
+      this.medCards = [...meds]
+    },
     checkInput(e) {
       this.nameError = this.name.length > 0 ? "" : "This field cannot be empty";
 
