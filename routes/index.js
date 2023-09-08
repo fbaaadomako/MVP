@@ -5,6 +5,7 @@ const db = require("../model/helper");
 /* GET list of medications */
 router.get("/", function (req, res, next) {
   db("SELECT * FROM medications;")
+
     .then((result) => {
       res.send(result.data);
     })

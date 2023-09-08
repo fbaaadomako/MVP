@@ -14,6 +14,8 @@
     "express": "~4.16.1",
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
+    "mysql2": "^3.6.0",
+    "node-mysql": "^0.4.2",
     "nodemon": "^2.0.22",
     "vue-router": "^4.2.0"
   }
