@@ -1,5 +1,5 @@
 require("dotenv").config();
-const mysql = require("mysql");
+const mysql = require("mysql2");
 
 module.exports = async function db(query) {
   const results = {
@@ -18,6 +18,7 @@ module.exports = async function db(query) {
       password: DB_PASS,
       database: DB_NAME || "database",
       multipleStatements: true,
+      port: process.env.DB_PORT || "3306"
     });
 
     con.connect(function (err) {
@@ -53,6 +54,10 @@ module.exports = async function db(query) {
           // such as when the query ends with SELECT LAST_INSERT_ID() and returns an insertId)
           results.data.push(result[0]);
         }
+        else {
+          //for mysql2 results data structure
+          result.forEach(row => results.data.push(row));
+          }
 
         con.end();
         resolve(results);
