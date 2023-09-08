@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "migrate": "node model/database.js"
+    "migrate": "node model/database.js",
+    "build": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -18,5 +19,6 @@
     "node-mysql": "^0.4.2",
     "nodemon": "^2.0.22",
     "vue-router": "^4.2.0"
+   
   }
 }
