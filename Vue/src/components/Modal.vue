@@ -5,7 +5,7 @@
       
       <div class="modal-container">
         <button type="button" 
-    @click="$emit('close')" class="close"> 
+    @click="handleModalClose()" class="close"> 
     <img src="../assets/close.png" class="close-btn">
 </button>
         <div class="modal-body">
@@ -37,7 +37,7 @@
           <div class="text-red-600 font-medium" v-if="modalError">{{ modalError }}</div>
 
           <button
-            class="btn text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center"
+            class="btn mt-6 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center"
             @click.prevent="handleSubmit()">Save & Continue</button>
 
         </div>
@@ -99,7 +99,7 @@ export default {
 
     },
     handleModalClose() {
-     this.$emit()
+     this.$emit('close')
 
     },
   }
