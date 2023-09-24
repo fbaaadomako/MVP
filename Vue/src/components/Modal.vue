@@ -1,14 +1,24 @@
 <template>
   <Transition name="modal">
+    
     <div v-if="show" class="modal-mask">
+      
       <div class="modal-container">
-        <div class="modal-header">
+        <button type="button" 
+    @click="$emit('close')" class="close"> 
+    <img src="../assets/close.png" class="close-btn">
+</button>
+        <div class="modal-body">
+          
+        <div class="modal-header"> 
           <slot name="header" />
+    
         </div>
-
+     
         <div class="content-center">
-          <div class="modal-body">
-
+    
+     
+    
             <form>
               <label>Dose:</label>
               <input type="text" required v-model="dose" />
@@ -86,6 +96,10 @@ export default {
             console.log(error);
           });
       }
+
+    },
+    handleModalClose() {
+     this.$emit()
 
     },
   }
