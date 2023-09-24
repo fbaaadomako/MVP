@@ -13,7 +13,7 @@
 .navpanel {
   position: relative;
   margin: 0 80px;
-  height: 4em;
+  height: 64px;
 }
 
 .navpanel div {
@@ -25,19 +25,19 @@
 /* LOGO */
 .logo {
   padding-right: 5px;
-  height: 2em;
+  height: 32px;
 }
 
 h4 {
   font-weight: 700;
   text-shadow: 2px 2px 2px rgb(230, 230, 230);
-  font-size: 1.1em;
+  font-size: 18px;
 }
 
 /* NAV LIST */
 .nav {
-  padding: 0.5em;
-  font-size: 1.1em;
+  padding: 8px;
+  font-size: 18px;;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
@@ -64,15 +64,15 @@ h4 {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1em;
+  font-size: 51px;
+  line-height: 18px;
   font-weight: 500;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: white;
 }
 
 p {
-  color: white
+  color: white;
   padding-bottom: 10px;
 }
 
@@ -99,13 +99,13 @@ input:invalid {
 label {
   display: inline-block;
   margin: 25px 0 15px;
-  font-size: 1em;
+  font-size: 16px;
   font-weight: bold;
 }
 
 .btn {
-  padding: 0.7em 1.2em;
-  font-size: 1.1em;
+  padding: 13px 20px;
+  font-size: 18px;
   font-weight: 500;
   font-family: inherit;
   transition: color 0.25s;
@@ -159,21 +159,21 @@ label {
 
 /* MEDICATION CARDS */
 h2 {
-  font-size: 2em;
+  font-size: 32px;
   line-height: 1.1;
   font-weight: 500;
 }
 
 .card p {
   padding: 5px 0;
-  font-size: 1em;
+  font-size: 16px;
   color: black;
 }
 
 .dose {
   color: gray;
   display: inline-block;
-  font-size: 0.7em;
+  font-size: 10px;
 }
 
 .icon {
@@ -236,10 +236,10 @@ h2 {
     width: 80%;
   }
   h2 {
-    font-size: 1em;
+    font-size: 16px;
   }
   .card p {
-    font-size: 0.8em;
+    font-size: 13px;
   }
 }
 
