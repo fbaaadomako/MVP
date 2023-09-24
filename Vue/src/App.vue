@@ -28,7 +28,7 @@
     <div class="user p-20">
 
       <div class="mx-10">
-        <h1 class="pb-6">Hello, User</h1>
+        <h1>Hello, User</h1>
         <label>
           <p>Please enter the name of a prescription to begin:</p>
         </label>
