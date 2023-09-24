@@ -99,8 +99,7 @@ export default {
 
     },
     handleModalClose() {
-     this.$emit('close')
-
+     this.$emit('close');
     },
   }
 }
