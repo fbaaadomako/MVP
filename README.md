@@ -2,7 +2,8 @@
 
 Full Stack application created using Vue, Node/Express, and MySQL.
 
-<video src="./public/images/MVP-Demo.mp4"></video>
+https://github.com/fbaaadomako/MVP/assets/119977865/2afc886f-7395-4659-8d0f-4e88b29e85ff
+
 
 ## Setup
 
